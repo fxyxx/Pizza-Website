@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza mania</title>
+  </head>
+  <body class="dark_theme">
+    <!-- MODAL -->
+    <div class="modal micromodal-slide" id="modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">You got a discount</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <p>
+              Enjoy a delicious pizza feast for less with our exclusive coupon
+              code! Simply apply code <span id="promo-code"></span> during
+              checkout and receive a generous <span>20% discount</span> on your
+              entire order. Satisfy your cravings and save money at the same
+              time - it's a win-win situation! Don't wait any longer, order now
+              and take advantage of this limited-time offer.
+            </p>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!-- HEADER -->
+    <header id="home" class="header">
+      <div class="nav__wrapper">
+        <div class="nav__logo">
+          <img class="logo_img" src="/images/logo_dark.svg" alt="logo" />
+          <h1>mania</h1>
+        </div>
+        <nav>
+          <ul class="nav__list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li id="discount-btn"><a>Specials & Coupons</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+      <div class="header__content">
+        <div class="header__text">
+          <h2 id="h2">Pizza family</h2>
+          <p>People Disappoint, But Pizza Never Does.</p>
+          <div class="header__input">
+            <input disabled type="text" />
+            <button disabled>
+              <img src="/images/search_icon.svg" alt="Search Icon" />Search
+              Location
+            </button>
+          </div>
+          <button disabled>Try now</button>
+        </div>
+        <div class="header__image">
+          <img src="/images/home.png" alt="Some food" />
+        </div>
+      </div>
+      <div id="theme_btn">
+        <img src="/images/dark-theme_icon.svg" alt="Change theme button" />
+      </div>
+    </header>
+    <main>
+      <!-- SECTION MENU -->
+      <section id="menu" class="menu">
+        <img src="/images/menu.png" alt="" />
+        <div class="menu__content">
+          <h2>Menu</h2>
+          <div class="menu__text">
+            <div class="menu__block-left">
+              <div class="block-left__item">
+                <h3>Pizza By The Slice</h3>
+                <div class="item__list">
+                  <p>Pepperoni <span> .......................</span> $1.5</p>
+                  <p>Mushroom <span>........................</span> $2.4</p>
+                  <p>Sausage <span>.........................</span> $2.7</p>
+                  <p>Black olives <span>....................</span> $3.1</p>
+                </div>
+              </div>
+              <div class="block-left__item">
+                <h3>Pizza By The Slice</h3>
+                <div class="item__list">
+                  <p>Stuffed Crust<span> ...................</span> $4.3</p>
+                  <p>Cracker Crust<span> ...................</span> $4.6</p>
+                  <p>Thin Crust<span>......................</span> $5.2</p>
+                  <p>Cheese Crust<span> ....................</span> $6.2</p>
+                </div>
+              </div>
+            </div>
+            <div class="menu__block-right">
+              <h3>Gourmet Pizza</h3>
+              <div class="block-right__list">
+                <div class="block-right__item">
+                  <div class="item__name">
+                    <h4>Pepperoni Pizza</h4>
+                    <p>
+                      pizza comes with all tapping that you describe in this
+                      section
+                    </p>
+                  </div>
+                  <p>$ 19.99</p>
+                </div>
+                <div class="block-right__item">
+                  <div class="item__name">
+                    <h4>Margherita Pizza</h4>
+                    <p>
+                      pizza comes with all tapping that you describe in this
+                      section
+                    </p>
+                  </div>
+                  <p>$ 15.99</p>
+                </div>
+                <div class="block-right__item">
+                  <div class="item__name">
+                    <h4>Hawaiian Pizza</h4>
+                    <p>
+                      pizza comes with all tapping that you describe in this
+                      section
+                    </p>
+                  </div>
+                  <p>$ 22.99</p>
+                </div>
+                <div class="block-right__item">
+                  <div class="item__name">
+                    <h4>Veggie Pizza</h4>
+                    <p>
+                      pizza comes with all tapping that you describe in this
+                      section
+                    </p>
+                  </div>
+                  <p>$ 26.99</p>
+                </div>
+                <button disabled>Explore More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION MONTH OFFER -->
+      <section class="month-offer">
+        <div class="month-offer__block-left">
+          <div class="block-left__label">
+            <h2><span>Pizza</span> Of The Month</h2>
+            <h2>The Big <span class="bird">bird</span></h2>
+          </div>
+          <img src="/images/month-offer.png" alt="hands taking pizza" />
+        </div>
+        <div class="diagonal-line"></div>
+        <div class="month-offer__block-right">
+          <div class="block-right__text-wrapper">
+            <ul>
+              <li>Meat Pizza</li>
+              <li>Margarita Pizza</li>
+              <li>Hawaiian Pizza</li>
+              <li>Pepperoni Pizza</li>
+              <li>Veggie Pizza</li>
+              <li>Cheese Pizza</li>
+            </ul>
+          </div>
+          <div class="block-right__btns-wrapper">
+            <button disabled>Order Online Now</button>
+            <button disabled>See Our Menu</button>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION CONTACT US -->
+      <section id="contact-us" class="contact-us">
+        <div class="contact-us__wrapper">
+          <p>*Terms & Conditions Applied .</p>
+          <div class="contact-us__card">
+            <div class="contact-us__text">
+              <h3>Reservation</h3>
+              <p>Book online or give us a call on +91 1111 222 333</p>
+              <p>Between 9:30 am - 10:00 pm</p>
+            </div>
+            <div class="contact-us__form">
+              <form action="" method="post">
+                <div class="form__wrapper">
+                  <label for="name">Name </label
+                  ><input
+                    type="text"
+                    id="name"
+                    name="name"
+                    onkeypress="return /[A-Za-z]/i.test(event.key)"
+                  />
+                </div>
+                <div class="form__wrapper">
+                  <label for="email">E-Mail </label
+                  ><input type="email" id="email" name="email" />
+                </div>
+                <div class="form__wrapper">
+                  <label for="phone">People Number </label
+                  ><input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form__wrapper">
+                  <label for="date">Date & Time </label
+                  ><input type="text" id="date" name="date" />
+                </div>
+                <button type="submit">Send Mail</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION TAKE ORDER -->
+      <section class="take-order">
+        <div class="take-order__bar">
+          <div class="take-order__logo">
+            <img class="logo_img" src="/images/logo_dark.svg" alt="logo" />
+            <h2>mania</h2>
+          </div>
+          <ul class="take-order__list">
+            <li>
+              <a href="#"><img src="/images/help_icon.svg" alt="" />Help</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/images/sign-in_icon.svg" alt="" />Sign In</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="take-order__details">
+          <div class="take-order__user-info">
+            <div class="user-info__item">
+              <div class="item__img-container">
+                <img src="/images/user_icon.svg" alt="" />
+              </div>
+              <h4>Account</h4>
+              <div class="user-info__item__content">
+                <p>
+                  To place your order now, log in to your existing account or
+                  sign up.
+                </p>
+                <div class="user-info__btns-container">
+                  <button>Have an account ? <span>Log in</span></button>
+                  <button>New to Mania ? <span>Sign in</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="user-info__item">
+              <div class="item__img-container">
+                <img src="/images/location_icon.svg" alt="" />
+              </div>
+              <h4>Delivery address</h4>
+              <div class="user-info__item__content hide">
+                <div id="map" style="height: 300px"></div>
+                <input
+                  id="address-input"
+                  type="text"
+                  placeholder="Введите адрес"
+                />
+                <button id="submit-button">Выбрать адрес</button>
+              </div>
+            </div>
+            <div class="user-info__item">
+              <div class="item__img-container">
+                <img src="/images/payment_icon.svg" alt="" />
+              </div>
+              <h4>Payment</h4>
+              <div
+                class="user-info__item__content hide"
+                style="height: 300px"
+              ></div>
+            </div>
+          </div>
+          <div class="take-order__order-info">
+            <div class="order-info__label">
+              <img src="/images/take-order_pizza.png" alt="" />
+              <div class="label__text-wrapper">
+                <h4>Wow ! Pizza</h4>
+                <p>delivered to this location</p>
+              </div>
+            </div>
+            <div class="order-info__customize">
+              <label for="coupon_code">
+                Apply your coupon code:
+                <input
+                  name="coupon_code"
+                  id="coupon_code"
+                  type="text"
+                  placeholder="XXXXXX"
+                  minlength="6"
+                  maxlength="6"
+                  value=""
+                />
+                <button id="check-promo__btn">apply</button>
+              </label>
+              <div class="pizza-options__container">
+                <button id="new-pizza__btn">Add pizza</button>
+                <div class="pizza-options">
+                  <div class="quantity__text">
+                    <h4>Custom Pizza</h4>
+                    <div class="customize">
+                      <p>Customize <span>></span></p>
+                      <div class="customize__wrapper">
+                        <div class="pizza-size">
+                          <h3>Size:</h3>
+                          <select id="size-select">
+                            <option value="0">Select size</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                          </select>
+                        </div>
+                        <div class="pizza-toppings">
+                          <h3>Toppings:</h3>
+                          <div class="toppings-list">
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Pepperoni"
+                              />
+                              <span>Pepperoni</span> $1.5
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Mushroom"
+                              />
+                              <span>Mushroom</span> $2.4
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Sausage"
+                              />
+                              <span>Sausage</span> $2.7
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Black olives"
+                              />
+                              <span>Black olives</span> $3.1
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Bacon"
+                              />
+                              <span>Bacon</span> $2.5
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Onions"
+                              />
+                              <span>Onions</span> $1.1
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Chicken"
+                              />
+                              <span>Chicken</span> $2.3
+                            </label>
+                            <label>
+                              <input
+                                type="checkbox"
+                                class="topping"
+                                value="Peppers"
+                              />
+                              <span>Peppers</span> $2.1
+                            </label>
+                          </div>
+                        </div>
+                        <div class="pizza-crust">
+                          <h3>Crust:</h3>
+                          <select id="crust-select">
+                            <option value="0">Select crust</option>
+                            <option value="Stuffed">Stuffed - $4.3</option>
+                            <option value="Cracker">Cracker - $4.6</option>
+                            <option value="Thin">Thin - $5.2</option>
+                            <option value="Cheese">Cheese - $6.2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="quantity__btn">
+                    <div id="minus" class="quantity__btn-block sign first_m">
+                      <img src="/images/minus_icon.svg" alt="" />
+                    </div>
+                    <div id="quantity" class="quantity__btn-block first_q">
+                      0
+                    </div>
+                    <div id="plus" class="quantity__btn-block sign first_p">
+                      <img src="/images/plus_icon.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>" Any massage to your Loving one ? "</p>
+            </div>
+            <div class="order-info__bill-details">
+              <h3>Bill Details</h3>
+              <div class="bill-details__content">
+                <div class="bill-details__content-block">
+                  <p>Item total <span id="cost">$0.00</span></p>
+                  <p>
+                    Delivery partner fee<span class="fee">-$19.00</span
+                    ><span class="free">FREE</span>
+                  </p>
+                </div>
+                <div class="bill-details__content-block">
+                  <p>Item Discount <span id="discount">-$0.00</span></p>
+                </div>
+                <div class="bill-details__content-block black">
+                  <p>Taxes and Charges <span id="taxes">$0.00</span></p>
+                </div>
+                <p>To Pay <span id="total">$0.00</span></p>
+                <button id="pay__btn" type="submit">PAY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

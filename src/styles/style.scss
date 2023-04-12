@@ -1,0 +1,31 @@
+@import './utilities/vars';
+@import './utilities/mixins';
+@import './utilities/fonts';
+@import './utilities/global';
+
+@import './components/Header';
+@import './components/Main';
+
+@import './components/Modal';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1920px;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+
+  &.dark_theme {
+    background-color: var(--color-background-B);
+  }
+  &.light_theme {
+    background-color: var(--color-background-W);
+  }
+}
+
+#map {
+  width: 100%;
+}
