@@ -353,16 +353,17 @@
           }
         }
         .pizza-options__container {
-          height: 120px;
-          width: 70%;
+          height: 130px;
+          width: 80%;
           display: flex;
           flex-flow: column;
-          gap: 10px;
+          gap: 5px;
           overflow-y: auto;
 
           @media (max-width: 1250px) {
             height: 210px;
             width: 100%;
+            gap: 10px;
           }
         }
         .pizza-options {
@@ -489,7 +490,8 @@
 
               .customize__wrapper-standart {
                 position: fixed;
-                right: 300px;
+                right: 440px;
+                bottom: 100px;
                 display: flex;
                 background-color: rgba(131, 131, 131, 0.719);
                 backdrop-filter: blur(50px);
