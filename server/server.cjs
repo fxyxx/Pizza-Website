@@ -6,8 +6,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: 'nakoskin.buss@gmail.com',
-    pass: 'egdssoqnlwwgorvg',
+    user: 'some-mail@gmail.com',
+    pass: 'some-pass',
   },
 })
 
@@ -31,8 +31,8 @@ const server = http.createServer((req, res) => {
       console.log(data)
 
       const mailOptions = {
-        from: 'nakoskin.buss@gmail.com',
-        to: 'vovkhik.games@gmail.com',
+        from: 'some-mail@gmail.com',
+        to: 'some-mail@gmail.com',
         subject: 'Your order',
         html: data,
       }
