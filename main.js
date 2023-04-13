@@ -28,7 +28,7 @@ const checkPromoCode = () => {
 
     return calcTotal()
   } else {
-    promo_input.setCustomValidity('Неверное значение')
+    promo_input.setCustomValidity('Incorrect value')
     promo_input.classList.add('invalid')
 
     promo_input.classList.add('shake')
